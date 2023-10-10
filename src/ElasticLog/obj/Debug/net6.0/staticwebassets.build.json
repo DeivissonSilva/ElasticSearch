@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "G6VUutIJCq2Mp81vUfef0WlyLr7J7F32ub81h9Kf/vM=",
+  "Source": "ElasticLogAPI",
+  "BasePath": "_content/ElasticLogAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
