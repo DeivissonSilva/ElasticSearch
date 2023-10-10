@@ -1,12 +1,15 @@
 ﻿using CodeBehind.ElasticSearch.Models;
 using CodeBehind.ElasticSearch.Repository;
+using CodeBehind.ElasticSearch.ViewModel;
+using ElasticLogAPI.Mapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace GestaoSegLogs.App.Controllers
 {
-    [Authorize]
+    [Route("api/[controller]")]
+    [ApiController]
     public class SegLogsController : ControllerBase
     {
         private readonly ISeglogsRepository _segLogsRepository;
@@ -16,28 +19,14 @@ namespace GestaoSegLogs.App.Controllers
             _segLogsRepository = segLogsRepository;
         }
 
-
         [AllowAnonymous]
         [HttpPost]
-        [Route("novo-segLogs")]
-        public async Task<IActionResult> Create(SeglogsVM seglogsVM)
+        [Route("adiciona")]
+        public async Task<IActionResult> Create(SeglogVM seglogsVM)
         {
             if (!ModelState.IsValid) return BadRequest();
 
-            var seglog = new Seglogs
-            {
-                cod_log = seglogsVM.cod_log,
-                log_usuario = seglogsVM.log_usuario,
-                log_login = seglogsVM.log_login,
-                log_acao = seglogsVM.log_acao,
-                log_data_inicio = seglogsVM.log_data_inicio,
-                log_ip = seglogsVM.log_ip,
-                log_maquina = seglogsVM.log_maquina,
-                log_tabela = seglogsVM.log_tabela,
-                log_tabela_id = seglogsVM.log_tabela_id,
-                log_objeto_mudancas = seglogsVM.log_objeto_mudancas
-            };
-
+            Seglogs seglog = Mapper.SeglogVMParaSeglogs(seglogsVM);
             var retorno = _segLogsRepository.Persistir(seglog);
 
             if (retorno)

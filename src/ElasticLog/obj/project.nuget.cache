@@ -1,15 +1,31 @@
 {
   "version": 2,
-  "dgSpecHash": "vatYeL0li9+rEuv4o5riKznnjTdgJ0nDoldPXo0nE3n8h12sN1b83mIQLRoSFvUFdRWfUtcTH+smk3nVCx1FDA==",
-  "success": true,
+  "dgSpecHash": "3/8waWpOMKZp0/jbM+1f28kiyEky5dd9YfbXhytWx+t6ioFeTUtbxQbGCEbkltN0XQ8GJGuQmnwkBMXmruCGuw==",
+  "success": false,
   "projectFilePath": "D:\\Deivisson\\Projetos_Estudos\\ElasticSearchV1\\src\\ElasticLog\\ElasticLogAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Deivisson\\.nuget\\packages\\elasticsearch.net\\7.9.0\\elasticsearch.net.7.9.0.nupkg.sha512",
+    "C:\\Users\\Deivisson\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
     "C:\\Users\\Deivisson\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Deivisson\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Deivisson\\.nuget\\packages\\nest\\7.9.0\\nest.7.9.0.nupkg.sha512",
+    "C:\\Users\\Deivisson\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Deivisson\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\Deivisson\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\Deivisson\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "C:\\Users\\Deivisson\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+    "C:\\Users\\Deivisson\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\Deivisson\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.5.1\\system.diagnostics.diagnosticsource.4.5.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Detected package downgrade: Swashbuckle.AspNetCore from 6.5.0 to 6.2.3. Reference the package directly from the project to select a different version. \r\n ElasticLogAPI -> ElasticSearch -> Swashbuckle.AspNetCore (>= 6.5.0) \r\n ElasticLogAPI -> Swashbuckle.AspNetCore (>= 6.2.3)",
+      "libraryId": "Swashbuckle.AspNetCore",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
